@@ -1,6 +1,6 @@
 /* 
  * Project myProject
- * Author: Colby
+ * Author: Colby and Morgan
  * Date: 
  * For comprehensive documentation and examples, please visit:
  * https://docs.particle.io/firmware/best-practices/firmware-template/
@@ -35,20 +35,48 @@ void setup()
 	pinMode(MY_LED, OUTPUT);
 }
 
+// Helper function to blink a dot (short)
+void dot() {
+	digitalWrite(MY_LED, HIGH);
+	delay(200);  // Dot duration
+	digitalWrite(MY_LED, LOW);
+	delay(200);  // Gap between symbols
+}
+
+// Helper function to blink a dash (long)
+void dash() {
+	digitalWrite(MY_LED, HIGH);
+	delay(600);  // Dash duration
+	digitalWrite(MY_LED, LOW);
+	delay(200);  // Gap between symbols
+}
+
+// Helper function to create gap between letters
+void letterGap() {
+	delay(400);  // Additional gap to total 600ms between letters
+}
+
 // The loop() method is called frequently.
 void loop()
 {
-	// Turn on the LED
-	digitalWrite(MY_LED, HIGH);
+	// S: three dots
+	dot();
+	dot();
+	dot();
+	letterGap();
 
-	// Leave it on for one second
-	delay(3s);
+	// O: three dashes
+	dash();
+	dash();
+	dash();
+	letterGap();
 
-	// Turn it off
-	digitalWrite(MY_LED, LOW);
+	// S: three dots
+	dot();
+	dot();
+	dot();
+	letterGap();
 
-	// Wait one more second
+	// Long pause before repeating
 	delay(1s);
-
-	// And repeat!
 }
