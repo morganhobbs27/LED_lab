@@ -1,3 +1,8 @@
+SOS code restructure for LED Lab 
+Colby and Morgan 2/16/26
+
+
+
 # LED_lab_Restructure
 
 This firmware project was created using [Particle Developer Tools](https://www.particle.io/developer-tools/) and is compatible with all [Particle Devices](https://www.particle.io/devices/).
